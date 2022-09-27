@@ -1,4 +1,9 @@
-import { render } from 'preact';
-import './index.css';
+import { h, render } from 'preact';
 
-render(null, document.getElementById('app') as HTMLElement);
+import 'uno.css';
+
+function App() {
+  return <div className="bg-amber">hhh</div>;
+}
+
+render(<App />, document.getElementById('app') as HTMLElement);

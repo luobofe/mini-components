@@ -1,9 +1,9 @@
 {
-  "name": "mini-comps",
+  "name": "mini-components",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "postinstall": "husky install"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "@preact/preset-vite": "^2.3.0",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
+    "@unocss/transformer-attributify-jsx": "^0.45.25",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.8",
@@ -30,6 +31,7 @@
     "stylelint-config-standard": "^28.0.0",
     "stylelint-less": "^1.0.6",
     "typescript": "^4.8.3",
+    "unocss": "^0.45.25",
     "vite": "^3.1.0"
   },
   "lint-staged": {

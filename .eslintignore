@@ -1,0 +1,7 @@
+# linter
+.eslintrc.js
+stylelint.config.js
+commitlint.config.js
+
+# packages
+node_modules/

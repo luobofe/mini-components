@@ -38,6 +38,7 @@ module.exports = {
     'react/no-string-refs': 'error',
     // close it for unocss
     'react/no-unknown-property': 'off',
+    'react/display-name': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'error',
   },

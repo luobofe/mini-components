@@ -36,6 +36,8 @@ module.exports = {
     'react/no-find-dom-node': 'error',
     'react/no-is-mounted': 'error',
     'react/no-string-refs': 'error',
+    // close it for unocss
+    'react/no-unknown-property': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'error',
   },

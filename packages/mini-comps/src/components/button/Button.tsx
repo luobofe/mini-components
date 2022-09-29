@@ -1,16 +1,29 @@
+import type { ComponentChild } from 'preact';
+import type { BaseComponent } from '@src/typings/components';
 import { h } from 'preact';
 
-export interface ButtonProps {
+export interface ButtonProps extends BaseComponent<HTMLButtonElement> {
   block?: boolean;
-  disabled?: boolean;
-  htmlType?: 'button' | 'submit' | 'reset';
+  color?: string;
   loading?: boolean;
   variant?: 'primary' | 'light' | 'text' | 'outline';
-  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  children?: ComponentChild;
 }
 
 export function Button(props: ButtonProps) {
-  const { variant } = props;
+  const { block, color, disabled, type, loading, variant } = props;
 
-  return <button></button>;
+  return (
+    <button
+      bg={color}
+      className={props.className}
+      hidden={props.hidden}
+      style={props.style}
+      onClick={props.onClick}
+      onClickCapture={props.onClickCapture}
+    >
+      {props.children}
+    </button>
+  );
 }

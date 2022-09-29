@@ -5,7 +5,7 @@ export default function () {
   return (
     <fieldset>
       <legend>Button</legend>
-      <Button></Button>
+      <Button color="pink">Primary</Button>
     </fieldset>
   );
 }

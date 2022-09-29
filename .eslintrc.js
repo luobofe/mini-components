@@ -27,7 +27,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'warn',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'no-empty-function': 'off',
     'unused-imports/no-unused-imports': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -36,6 +36,7 @@ module.exports = {
     'react/no-find-dom-node': 'error',
     'react/no-is-mounted': 'error',
     'react/no-string-refs': 'error',
+    'react/prop-types': 'off',
     // close it for unocss
     'react/no-unknown-property': 'off',
     'react/display-name': 'off',

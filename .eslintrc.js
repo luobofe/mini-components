@@ -8,6 +8,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    // "plugin:react/jsx-runtime",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -18,12 +19,24 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "react-hooks", "unused-imports", "@typescript-eslint"],
-  settings: {
-    react: {
-      pragma: "h",
-      version: "16.0",
+  overrides: [
+    {
+      files: ["./packages/components/**/*"],
+      settings: {
+        react: {
+          pragma: "h",
+          version: "16.0",
+        },
+      },
     },
-  },
+    {
+      files: ["./packages/website/*.js"],
+      rules: {
+        "no-undef": "off",
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
+  ],
   rules: {
     "no-console": "warn",
     "no-unused-vars": "off",

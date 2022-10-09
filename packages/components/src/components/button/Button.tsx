@@ -1,5 +1,6 @@
 import type { BaseComponent } from "@src/typings/components";
-import { FunctionComponent, h } from "preact";
+import type { FunctionComponent } from "preact";
+import { h } from "preact";
 import { combineClass, prefixClass } from "@src/utils/clsx";
 import { useMemo, useRef } from "preact/hooks";
 import { Ripple } from "./Ripple";

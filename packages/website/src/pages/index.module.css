@@ -1,0 +1,12 @@
+.heroBanner {
+  position: relative;
+  padding: 4rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

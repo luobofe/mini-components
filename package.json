@@ -1,12 +1,12 @@
 {
-  "name": "nomorepo",
+  "name": "monorepo",
   "version": "0.0.1",
   "scripts": {
     "postinstall": "husky install",
     "dev": "pnpm --dir ./packages/components dev",
     "build": "pnpm --dir ./packages/components build",
-    "docs:start": "pnpm --dir ./packages/website start",
-    "docs:deploy": "pnpm --dir ./packages/website deploy"
+    "docs:start": "pnpm --dir ./packages/website docs:start",
+    "docs:deploy": "pnpm --dir ./packages/website docs:deploy"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

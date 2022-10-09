@@ -9,6 +9,8 @@ module.exports = {
   /* Github Config */
   organizationName: "luobofe",
   projectName: "mini-components",
+  deploymentBranch: "gh-pages",
+
   presets: [
     [
       "classic",

@@ -1,0 +1,27 @@
+name: Mini-Components Docs
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+      - uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
+      - name: gh-pages
+        env:
+          USE_SSH: true
+        run: |
+          git config --global user.email "luobo.fe@gmail.com"
+          git config --global user.name "夕阳萝卜"
+          pnpm install --frozen-lockfile
+          pnpm docs:deploy
+

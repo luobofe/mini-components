@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "postinstall": "husky install",
-    "dev": "pnpm --dir ./packages/mini-comps dev",
-    "build": "pnpm --dir ./packages/mini-comps build"
+    "dev": "pnpm --dir ./packages/components dev",
+    "build": "pnpm --dir ./packages/components build"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

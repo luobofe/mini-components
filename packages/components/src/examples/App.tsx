@@ -1,6 +1,6 @@
-import { h } from 'preact';
-import Button from './components/Button';
-import styles from './styles.module.less';
+import { h } from "preact";
+import Button from "./components/Button";
+import styles from "./styles.module.less";
 
 export function Page() {
   return (

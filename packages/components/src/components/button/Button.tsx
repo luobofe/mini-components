@@ -1,29 +1,52 @@
-import type { ComponentChild } from 'preact';
-import type { BaseComponent } from '@src/typings/components';
-import { h } from 'preact';
+import type { BaseComponent } from "@src/typings/components";
+import { FunctionComponent, h } from "preact";
+import { combineClass, prefixClass } from "@src/utils/clsx";
+import { useMemo, useRef } from "preact/hooks";
+import { Ripple } from "./Ripple";
+
+const clsx = prefixClass("mini-btn");
 
 export interface ButtonProps extends BaseComponent<HTMLButtonElement> {
   block?: boolean;
   color?: string;
-  loading?: boolean;
-  variant?: 'primary' | 'light' | 'text' | 'outline';
-  type?: 'button' | 'submit' | 'reset';
-  children?: ComponentChild;
+  variant?: "primary" | "text" | "outline";
+  type?: "button" | "submit" | "reset";
+  size?: `${number}px`;
+  ripple?: boolean;
 }
 
-export function Button(props: ButtonProps) {
-  const { block, color, disabled, type, loading, variant } = props;
+export const Button: FunctionComponent<ButtonProps> = (props) => {
+  const ref = useRef<HTMLButtonElement>(null);
+
+  const {
+    color,
+    block,
+    ripple = true,
+    variant = "primary",
+    size = "default",
+  } = props;
+
+  const colorStyles = useMemo(
+    () => ({ [variant === "primary" ? "mini-bg" : "mini-color"]: color }),
+    [variant, color]
+  );
 
   return (
     <button
-      bg={color}
-      className={props.className}
+      {...colorStyles}
+      ref={ref}
+      mini-h={size}
+      mini-w={block ? "100%" : "auto"}
+      className={combineClass(props.className, clsx(), clsx(variant))}
+      type={props.type}
       hidden={props.hidden}
+      disabled={props.disabled}
       style={props.style}
       onClick={props.onClick}
       onClickCapture={props.onClickCapture}
     >
       {props.children}
+      <Ripple show={ripple && !props.disabled} />
     </button>
   );
-}
+};

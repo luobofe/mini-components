@@ -41,5 +41,6 @@ module.exports = {
     "react/display-name": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-non-null-assertion": "off",
   },
 };

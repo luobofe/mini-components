@@ -1,4 +1,4 @@
-import type { JSX } from 'preact';
+import type { JSX } from "preact";
 
 declare interface BaseComponent<Element extends HTMLElement> {
   className?: string;
@@ -8,3 +8,5 @@ declare interface BaseComponent<Element extends HTMLElement> {
   onClick?: JSX.MouseEventHandler<Element>;
   onClickCapture?: JSX.MouseEventHandler<Element>;
 }
+
+declare type ComponentSize = "large" | "default" | "small";

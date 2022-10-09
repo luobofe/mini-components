@@ -2,17 +2,13 @@
  * @type {import('@docusaurus/types').Config}
  */
 module.exports = {
-  title: "My Site",
+  title: "MC",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
 
   /* Github Config */
   organizationName: "luobofe",
-  projectName: "luobofe",
-
+  projectName: "mini-components",
   presets: [
     [
       "classic",
@@ -21,33 +17,22 @@ module.exports = {
        */
       ({
         docs: {
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars"),
-        },
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
   ],
-
   /**
    * @type {import('@docusaurus/preset-classic').ThemeConfig}
    */
   themeConfig: {
     navbar: {
-      title: "萝卜",
-      items: [
-        {
-          type: "doc",
-          docId: "greeting",
-          position: "left",
-          label: "测试",
-        },
-      ],
+      title: "Mini-Components",
     },
     footer: {
       style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Mini-Components, Inc. Built with Docusaurus.`,
     },
   },
 };

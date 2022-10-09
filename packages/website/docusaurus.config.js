@@ -3,8 +3,8 @@
  */
 module.exports = {
   title: "MC",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://luobofe.github.io",
+  baseUrl: "/mini-components/",
 
   /* Github Config */
   organizationName: "luobofe",
